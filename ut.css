@@ -1,0 +1,119 @@
+:root {
+    --pink-primary: #ff85a2;
+    --pink-light: #fbb1bd;
+    --white: #ffffff;
+    --text-color: #d85778;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffc2d1 0%, #ffe5ec 100%);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Input Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--pink-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.glass-card h1 { font-family: 'Pacifico', cursive; color: var(--pink-primary); }
+
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--pink-light);
+    border-radius: 10px;
+    outline: none;
+}
+
+button {
+    background: var(--pink-primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+button:hover { transform: scale(1.1); }
+
+/* Main Content */
+.hidden { display: none; }
+.container { padding: 20px; text-align: center; }
+
+h1.bounce {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+}
+
+.wish-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 4px dashed var(--pink-light);
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.photo-frame {
+    width: 200px;
+    height: 200px;
+    border: 8px solid white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transform: rotate(-3deg);
+    transition: 0.3s;
+}
+
+.photo-frame:nth-child(even) { transform: rotate(3deg); }
+.photo-frame:hover { transform: rotate(0deg) scale(1.05); }
+
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Decorations */
+.decoration { font-size: 2rem; margin-top: 20px; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99;
+}

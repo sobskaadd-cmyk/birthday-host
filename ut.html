@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Surprise! 🎂</title>
+    <link rel="stylesheet" href="ut.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="input-overlay" class="overlay">
+        <div class="glass-card">
+            <h1>🎂 Birthday Surprise!</h1>
+            <p>Masukkan data dulu ya...</p>
+            <input type="text" id="userName" placeholder="Siapa nama yang ultah?" required>
+            <input type="date" id="birthDate" required>
+            <button onclick="generateSurprise()">Buka Kejutan! ✨</button>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <div class="container">
+            <header>
+                <h1 class="bounce">Happy Birthday, Meskipun Terlambat, Selamat Atas Ulang Tahunmu <span id="display-name"></span>! 💖</h1>
+            </header>
+
+            <div class="card-container">
+                <div class="wish-card">
+                    <div class="editable-content">
+                        <p id="wish-text" contenteditable="true">Make A Wishh.. Hope The Best For You, Thankyou Sudah Menjadi Orang Baik, Semoga Dalam Hidupmu, Kamu Di Kelilingi Orang Orang Baik Jugaaaa... 🎉</p>
+                    </div>
+                    <div class="editable-content">
+                     <small>(Make A Wish Siniii!!!)</small>
+                        <p id="wish-text" contenteditable="true">... 🎉</p>
+                    </div>
+                </div>
+
+                <div class="photo-grid">
+                    <div class="photo-frame"><img src="F1.jpeg" alt="Ultah 1"></div>
+                    <div class="photo-frame"><img src="F2.jpeg" alt="Ultah 2"></div>
+                    <div class="photo-frame"><img src="F3.jpeg" alt="Ultah 3"></div>
+                </div>
+            </div>
+            
+            <div class="decoration">
+                <span>🎈</span><span>🍰</span><span>✨</span><span>🎁</span><span>🌸</span>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="confetti"></canvas>
+
+    <script src="ut.js"></script>
+</body>
+</html>
